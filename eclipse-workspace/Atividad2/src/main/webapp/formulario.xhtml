@@ -1,0 +1,27 @@
+<?xml version="1.0" encoding="ISO-8859-1" ?>
+<!DOCTYPE html>
+<html xmlns="http://www.w3.org/1999/xhtml"
+      xmlns:h="http://java.sun.com/jsf/html">
+<head>
+    <title>Formulário JSF</title>
+    <link rel="stylesheet" href="_css/main.css" />
+</head>
+<body>
+    <h:form>
+        <h:panelGrid columns="2">
+            <h:outputLabel for="nome" value="Nome:" />
+            <h:inputText id="nome" value="#{bean.nome}" styleClass="input-field" />
+
+            <h:outputLabel for="sobrenome" value="Sobrenome:" />
+            <h:inputText id="sobrenome" value="#{bean.sobrenome}" styleClass="input-field" />
+
+            <h:outputLabel for="fone" value="Fone:" />
+            <h:inputText id="fone" value="#{bean.fone}" styleClass="input-field" />
+
+            <h:outputLabel for="email" value="E-mail:" />
+            <h:inputText id="email" value="#{bean.email}" styleClass="input-field" />
+        </h:panelGrid>
+        <h:commandButton value="Enviar" action="#{bean.submit}" />
+    </h:form>
+</body>
+</html>
